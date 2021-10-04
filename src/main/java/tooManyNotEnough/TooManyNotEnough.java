@@ -13,7 +13,8 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class TooManyNotEnough {
+public class
+TooManyNotEnough {
     public static void main(String[] args) throws InputMismatchException {
         try {
             Random r = new Random();

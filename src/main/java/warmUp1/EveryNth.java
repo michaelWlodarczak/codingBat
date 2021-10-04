@@ -19,7 +19,6 @@ public class EveryNth {
         return result;
     }
 
-    //TODO - PRZEMYSLEC TO JESZCZE RAZ, ZNISZCZYL MNIE TEN PROBLEM
 
     public static void main(String[] args) {
         EveryNth everyNth = new EveryNth();

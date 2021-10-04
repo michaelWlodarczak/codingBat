@@ -1,4 +1,4 @@
-package warmUp1;
+package warmUp1.startOz;
 
 /*
 Given a string, return a string made of the first 2 chars (if present),
@@ -9,23 +9,46 @@ startOz("bzoo") → "z"
 startOz("oxx") → "o"
  */
 
-//TODO
+
 public class StartOz {
     public String startOz(String str) {
-        return str;
+        if (str.length()>=2){
+            if (str.substring(0,2).equals("oz")){
+                return "oz";
+            }else if (str.substring(0,1).equals("o")&&!str.substring(1,2).equals("z")){
+                return "o";
+            }else if (!str.substring(0,1).equals("o")&&str.substring(1,2).equals("z")){
+                return "z";
+            }
+        }else if (str.length()==1){
+            if (str.substring(0,1).equals("o")){
+                return "o";
+            }
+        }
+        return "";
     }
+
+    /*
+    Solution:
+public String startOz(String str) {
+  String result = "";
+
+  if (str.length() >= 1 && str.charAt(0)=='o') {
+    result = result + str.charAt(0);
+  }
+
+  if (str.length() >= 2 && str.charAt(1)=='z') {
+    result = result + str.charAt(1);
+  }
+
+  return result;
+}
+     */
 
 
     public static void main(String[] args) {
         StartOz startOz = new StartOz();
 
-//        String ozmiha = "ozmiha";
-//        String oz = ozmiha.substring(0,2);
-//        String o = oz.substring(0,1);
-//        String z = oz.substring(1,2);
-//        System.out.println(oz);
-//        System.out.println(o);
-//        System.out.println(z);
 
 
         System.out.println(startOz.startOz("ozmandias")); //oz

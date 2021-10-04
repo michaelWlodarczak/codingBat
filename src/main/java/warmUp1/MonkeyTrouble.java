@@ -21,6 +21,10 @@ public class MonkeyTrouble {
         }
     }
 
+    public boolean monkeyTroubleShortest(boolean aSmile, boolean bSmile){
+        return (aSmile == bSmile);
+    }
+
     /*
     codingBat solution:
 
@@ -34,9 +38,22 @@ public class MonkeyTrouble {
   return false;
   // The above can be shortened to:
   //   return ((aSmile && bSmile) || (!aSmile && !bSmile));
-  // Or this very short version (TODO think about how this is the same as the above)
+  // Or this very short version
   //   return (aSmile == bSmile);
 }
      */
+    public static void main(String[] args) {
+        MonkeyTrouble monkeyTrouble = new MonkeyTrouble();
 
+        System.out.println(monkeyTrouble.monkeyTrouble(true, true));
+        System.out.println(monkeyTrouble.monkeyTroubleShortest(true, true));
+        System.out.println();
+        System.out.println(monkeyTrouble.monkeyTrouble(false, false));
+        System.out.println(monkeyTrouble.monkeyTroubleShortest(false, false));
+        System.out.println();
+        System.out.println(monkeyTrouble.monkeyTrouble(true, false));
+        System.out.println(monkeyTrouble.monkeyTroubleShortest(true, false));
+
+
+    }
 }

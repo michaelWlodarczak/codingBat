@@ -13,33 +13,31 @@ missingChar("kitten", 4) → "kittn"
 import java.util.function.ToDoubleBiFunction;
 
 public class MissingChar {
-//    public String missingChar(String str, int n) {
+    public String missingChar(String str, int n) {
+        String front = str.substring(0, n);
+        String end = str.substring(n + 1, str.length());
+        return front + end;
+    }
 
-//    }
-//TODO
-    /*
-    Solution:
-public String missingChar(String str, int n) {
-  String front = str.substring(0, n);
-
-  // Start this substring at n+1 to omit the char.
-  // Can also be shortened to just str.substring(n+1)
-  // which goes through the end of the string.
-  String back = str.substring(n+1, str.length());
-
-  return front + back;
-}
-     */
 
     public static void main(String[] args) {
 
-       // MissingChar missingChar = new MissingChar();
-        String str = "dupa";
-        int n = 1;
-        for (int i = 0; i < str.length(); i++) {
-            System.out.println(str.charAt(i));
-        }
+        MissingChar missingChar = new MissingChar();
 
-        System.out.println(str.length());
+        System.out.println(missingChar.missingChar("Kitten", 1));
+        System.out.println(missingChar.missingChar("Kitten", 0));
+        System.out.println(missingChar.missingChar("Kitten", 4));
+
+
+        String str = "miha";
+        int n = 1;
+
+        String demo = str.substring(n, n + 1);
+        System.out.println(demo);
+        String front = str.substring(0, n);
+        String end = str.substring(n + 1, str.length());
+        System.out.println(front + end);
+
+
     }
 }

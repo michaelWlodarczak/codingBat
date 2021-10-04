@@ -11,20 +11,6 @@ notString("x") → "not x"
 notString("not bad") → "not bad"
  */
 public class NotString {
-    /*
-My solution, where i didnt notice that sring must BEGINS with "not"
-
-    public String notString(String str) {
-        String not = "not";
-        if(str.contains(not)){
-            return str;
-        }
-        return "not " + str;
-    }
-
-     */
-//TODO
-    //Solution:
     public String notString(String str) {
         if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
             return str;
