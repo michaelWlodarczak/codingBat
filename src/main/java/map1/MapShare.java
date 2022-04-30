@@ -1,4 +1,4 @@
-package map1.mapShare;
+package map1;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,9 +15,9 @@ mapShare({"a": "aaa", "c": "meh", "d": "hi"}) → {"a": "aaa", "b": "aaa", "d": 
 public class MapShare {
     public Map<String, String> mapShare(Map<String, String> map) {
     if(map.containsKey("a")){
-        map.remove("c");
         map.put("b",map.get("a"));
     }
+        map.remove("c");
         return map;
     }
 
@@ -34,7 +34,6 @@ public class MapShare {
         System.out.println(mapShare.mapShare(map));
 
 
-//        System.out.println(map.entrySet());
     }
 
 }
