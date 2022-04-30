@@ -1,10 +1,5 @@
 package string1.countLetters;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 /*
 Code Part: Please create a simple program that consumes one string as an application argument.
 Program should count the number of each letter in the string
@@ -27,6 +22,11 @@ So the argument is “JavaAcademy”.
 Additionally it would be nice if the results are sorted alphabetically.
 Really nice if Maven and Git are used.
  */
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CountLetters {
 
@@ -63,5 +63,4 @@ public class CountLetters {
 
         return result;
     }
-
 }
