@@ -28,9 +28,12 @@ public class WordAppend {
     //TODO
     public static void main(String[] args) {
 
-        String[]strings = {"a","b","c","d","e","a","g"};
+//        String[]strings = {"a","b","c","d","e","a","g"};
+        String[]strings = {"this", "or", "that", "and", "this", "and", "that"};
 
         Map<String,Integer>map=new HashMap<>();
+        Map<String,Integer>map2=new HashMap<>();
+
         for (int i = 0; i < strings.length; i++) {
             if(!map.containsKey(strings[i])){
                 map.put(strings[i],1);
@@ -38,15 +41,13 @@ public class WordAppend {
                 map.put(strings[i],map.get(strings[i])+1);
             }
         }
-
+        System.out.println(map);
 
         for (Integer v : map.values()){
-            if (v>=2){
-                System.out.println(map.keySet());
+            if (v%2==0){
+                
             }
         }
-
-        
 
 
     }

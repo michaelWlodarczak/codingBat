@@ -12,7 +12,7 @@ pairs(["code", "bug"]) → {"b": "g", "c": "e"}
 pairs(["man", "moon", "main"]) → {"m": "n"}
 pairs(["man", "moon", "good", "night"]) → {"g": "d", "m": "n", "n": "t"}
  */
-public class Painrs {
+public class Pairs {
     public Map<String, String> pairs(String[] strings) {
         Map<String,String> map = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
@@ -28,10 +28,10 @@ public class Painrs {
         String[]strings2 = {"man","moon","main"};
         String[]strings3 = {"man","moon","good","night"};
 
-        Painrs painrs = new Painrs();
-        System.out.println(painrs.pairs(strings1));
-        System.out.println(painrs.pairs(strings2));
-        System.out.println(painrs.pairs(strings3));
+        Pairs pairs = new Pairs();
+        System.out.println(pairs.pairs(strings1));
+        System.out.println(pairs.pairs(strings2));
+        System.out.println(pairs.pairs(strings3));
 
 
     }

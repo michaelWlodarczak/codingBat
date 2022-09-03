@@ -1,4 +1,4 @@
-package map2;
+package map2.firstChar;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +28,7 @@ public class FirstChar {
             }
         }
         return map;
+
     }
 
     public static void main(String[] args) {
