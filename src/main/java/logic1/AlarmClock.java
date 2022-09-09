@@ -13,5 +13,40 @@ alarmClock(0, false) → "10:00"
  */
 public class AlarmClock {
 
+//    public String alarmClock(int day, boolean vacation) {
+//        boolean isWeekDay = (day>=1 || day <=5);
+//        if (!vacation && isWeekDay) {
+//            return "7:00";
+//        } else if ((!vacation && !isWeekDay) || (vacation && isWeekDay)) {
+//            return "10:00";
+//        } else {
+//            return "off";
+//        }
+//    }
+//TODO
+    public String alarmClock(int day, boolean vacation) {
+        boolean isWeekDay = (day>=1 || day <=5);
+        if (!vacation && isWeekDay) {
+            return "7:00";
+        } else if (vacation && !isWeekDay){
+            return "off";
+        } else {
+            return "10:00";
+        }
+    }
+
+    public static void main(String[] args) {
+
+        AlarmClock alarmClock = new AlarmClock();
+
+        System.out.println(alarmClock.alarmClock(1, false));
+        System.out.println(alarmClock.alarmClock(5, false));
+        System.out.println(alarmClock.alarmClock(0, false));
+        System.out.println(alarmClock.alarmClock(6, false));
+        System.out.println(alarmClock.alarmClock(0, true));
+        System.out.println(alarmClock.alarmClock(6, true));
+
+    }
+
 
 }
