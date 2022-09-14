@@ -12,9 +12,9 @@ teaParty(3, 8) → 0
 teaParty(20, 6) → 2
  */
 
-//TODO
-public class TeaParty {
 
+public class TeaParty {
+//TODO
     public int teaParty(int tea, int candy) {
         if ((tea >= candy * candy || candy >= tea * tea) && tea >= 5 && candy >= 5) {
             return 2;
@@ -24,6 +24,8 @@ public class TeaParty {
             return 1;
         }
     }
+
+
 
     public static void main(String[] args) {
 
