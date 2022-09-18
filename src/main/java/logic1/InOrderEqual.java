@@ -11,7 +11,29 @@ inOrderEqual(5, 5, 7, true) → true
  */
 public class InOrderEqual {
 
+//    public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+//        if (a<b && b<c && !equalOk){
+//            return true;
+//        }else if (equalOk && ((a==b && a<c) || (a<b && b==c) || (a==b && a==c))){
+//            return true;
+//        }else {
+//            return false;
+//        }
+//    }
+
     public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-        return true;
+        return  (a<b && b<c && !equalOk) ||
+        (equalOk && ((a==b && a<c) || (a<b && b==c) || (a==b && a==c)));
+    }
+
+    public static void main(String[] args) {
+
+        InOrderEqual inOrderEqual = new InOrderEqual();
+
+        System.out.println(inOrderEqual.inOrderEqual(2, 5, 11, false));
+        System.out.println(inOrderEqual.inOrderEqual(5, 7, 6, false));
+        System.out.println(inOrderEqual.inOrderEqual(5, 5, 7, true));
+        System.out.println(inOrderEqual.inOrderEqual(5, 5, 7, false));
+        System.out.println(inOrderEqual.inOrderEqual(3, 4, 4, false));
     }
 }
