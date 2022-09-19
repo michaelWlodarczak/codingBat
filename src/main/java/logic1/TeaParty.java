@@ -14,18 +14,16 @@ teaParty(20, 6) → 2
 
 
 public class TeaParty {
-//TODO
+
     public int teaParty(int tea, int candy) {
-        if ((tea >= candy * candy || candy >= tea * tea) && tea >= 5 && candy >= 5) {
+        if ((tea>=candy*2 && tea>=5 && candy>=5) || (candy>=tea*2 && tea>=5 && candy>=5)){
             return 2;
-        } else if (tea < 5 || candy < 5) {
-            return 0;
-        } else {
+        }
+        if (tea>=5 && candy>=5){
             return 1;
         }
+        return 0;
     }
-
-
 
     public static void main(String[] args) {
 
@@ -34,6 +32,7 @@ public class TeaParty {
         System.out.println(teaParty.teaParty(6, 8));
         System.out.println(teaParty.teaParty(3, 8));
         System.out.println(teaParty.teaParty(20, 6));
+
 
     }
 }

@@ -15,27 +15,21 @@ public boolean love6(int a, int b) {
 public class Love6 {
 
 //    public boolean love6(int a, int b) {
-//        int a1 = Math.abs(a);
-//        int b1 = Math.abs(b);
-//        return ((a1 + b1 == 6) || ((a1 - b1 == 6) || (b1 - a1 == 6)) || (a1 == 6 || b1 == 6));
+//        if (a==6 || b==6){
+//            return true;
+//        }
+//        if (a+b==6){
+//            return true;
+//        }
+//        if (a-b==6 || b-a==6){
+//            return true;
+//        }
+//        return false;
 //    }
 
     public boolean love6(int a, int b) {
-        int a1 = Math.abs(a);
-        int b1 = Math.abs(b);
-        if (a1 + b1 == 6) {
-            return true;
-        }else if ((a1 + b1 == 6) && (a1 == 6 || b1 == 6)){
-            return false;
-        }else if ((a1 - b1 == 6) || (b1 - a1 == 6)){
-            return true;
-        }else if (a1 == 6 || b1 == 6){
-            return true;
-        }
-        return false;
+        return  (a==6 || b==6) || (a+b==6) || (a-b==6 || b-a==6);
     }
-
-
 
     public static void main(String[] args) {
 
